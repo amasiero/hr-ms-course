@@ -3,14 +3,11 @@ package com.andreymasiero.hrpayroll.services;
 import com.andreymasiero.hrpayroll.entities.Payment;
 import com.andreymasiero.hrpayroll.feignclients.WorkerFeignClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 public class PaymentService {
 
-    @Value("${hr-worker.host}")
-    private String workerHost;
     private final WorkerFeignClient workerFeignClient;
 
     @Autowired
